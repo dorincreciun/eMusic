@@ -1,0 +1,10 @@
+@use '../../../../app/styles/variables' as var;
+
+.header__nav-link{
+    font-size: 16px;
+    color: var.$foreground;
+
+    &--active{
+        color: var.$primary;
+    }
+}

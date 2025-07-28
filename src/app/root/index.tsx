@@ -1,25 +1,37 @@
-import {StrictMode} from 'react'
-import {createRoot} from 'react-dom/client'
-import {BrowserRouter} from "react-router";
-import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
-import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
-import {AppRoutes} from "../routes";
-import {LayoutApp} from "../../shared/layouts";
-import '../styles/index.scss';
+import { createRoot } from 'react-dom/client'
 
+/* TANSTACK */
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
+/* ROUTING */
+import { BrowserRouter } from 'react-router'
+import { AppRoutes } from '../routes'
+
+/* LAYOUTS */
+import { LayoutApp } from '../../shared/layouts'
+
+/* COMMON */
+import { Footer, Header } from '../../shared/common'
+
+/* SCSS */
+import '../styles/index.scss'
+
+/* TANSTACK DEFAULT SETTINGS */
 const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <QueryClientProvider client={queryClient}>
-            <BrowserRouter>
-                <LayoutApp>
-                    <AppRoutes />
-                </LayoutApp>
-            </BrowserRouter>
+	<QueryClientProvider client={queryClient}>
+		{/* APP */}
+		<BrowserRouter>
+			<LayoutApp>
+				<Header />
+				<AppRoutes />
+				<Footer />
+			</LayoutApp>
+		</BrowserRouter>
 
-            {/* Devtools */}
-            <ReactQueryDevtools initialIsOpen={false}/>
-        </QueryClientProvider>
-    </StrictMode>,
+		{/* TANSTACK DEVTOOLS */}
+		<ReactQueryDevtools initialIsOpen={false} />
+	</QueryClientProvider>
 )

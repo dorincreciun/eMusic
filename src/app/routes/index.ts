@@ -1,5 +1,6 @@
-import {useRoutes} from "react-router";
-import {publicRoutes} from "./public";
-import {guardRoutes} from "./private";
+import { type RouteObject, useRoutes } from 'react-router'
+import { publicRoutes } from './public'
+import { guardRoutes } from './private'
 
-export const AppRoutes = () => useRoutes([...publicRoutes, guardRoutes])
+export const AppRoutes = (): RouteObject[] =>
+	useRoutes([...publicRoutes, guardRoutes])

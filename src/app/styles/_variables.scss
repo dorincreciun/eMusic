@@ -1,0 +1,46 @@
+$radius: 0.625rem; // Border radius global, folosit la carduri, butoane, inputuri
+
+$background: #121212; // Fundalul principal al aplicației (dark mode)
+$foreground: #FFFFFF; // Textul principal pe fundal închis
+
+$card: #181818; // Fundal carduri, containere modale, panouri secundare
+$card-foreground: #B3B3B3; // Textul din carduri, subtitrări, conținut secundar
+
+$popover: #181818; // Fundal pentru popovere, tooltips, dropdown-uri
+$popover-foreground: #B3B3B3; // Text în popovere și dropdown-uri
+
+$primary: #1DB954; // Culoarea principală (ex: butoane primare, linkuri active)
+$primary-foreground: #FFFFFF; // Text pe fundalul primary (buton, link)
+
+$secondary: #282828; // Fundaluri secundare, header, sidebar închis
+$secondary-foreground: #B3B3B3; // Text pentru elemente secundare, descrieri
+
+$muted: #222222; // Elemente dezactivate, fundaluri muted (ex: background input disabled)
+$muted-foreground: #888888; // Text dezactivat, placeholder, etichete inactive
+
+$accent: #1DB954; // Culoare accent (folosită în highlights, hover, iconițe)
+$accent-foreground: #FFFFFF; // Text pe fundal accent
+
+$destructive: #B91C1C; // Acțiuni periculoase (ex: buton ștergere, erori)
+
+$border: #222222; // Culori borduri generale, divizoare, linii subtile
+$input: #222222; // Fundal inputuri, textarea, select-uri
+$ring: #1DB954; // Contururi focus și outline pe inputuri sau elemente interactive
+
+$chart-1: #1DB954; // Culoare principală pentru grafice, chart-uri (culoare 1)
+$chart-2: #535353; // Chart culoare secundară (culoare 2)
+$chart-3: #222222; // Chart culoare ternară (culoare 3)
+$chart-4: #282828; // Chart culoare suplimentară (culoare 4)
+$chart-5: #404040; // Chart culoare de fundal sau accente (culoare 5)
+
+$sidebar: #181818; // Fundal sidebar și meniuri laterale
+$sidebar-foreground: #FFFFFF; // Text în sidebar
+
+$sidebar-primary: #1DB954; // Accent primar pentru sidebar (ex: element activ)
+$sidebar-primary-foreground: #FFFFFF; // Text pe accentul sidebar primary
+
+$sidebar-accent: #1DB954; // Accent suplimentar în sidebar (ex: iconițe)
+$sidebar-accent-foreground: #FFFFFF; // Text pe accent sidebar secundar
+
+$sidebar-border: #222222; // Borduri și delimitări în sidebar
+$sidebar-ring: #1DB954; // Outline la focus în sidebar (ex: item selectat)

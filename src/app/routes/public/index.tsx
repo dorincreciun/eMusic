@@ -1,8 +1,9 @@
-import {OauthPage} from "../../../pages/oauth";
+import { OauthPage } from '../../../pages/oauth'
+import type { RouteObject } from 'react-router'
 
-export const publicRoutes = [
-    {
-        path: "/oauth",
-        element: <OauthPage/>,
-    }
-];
+export const publicRoutes: RouteObject[] = [
+	{
+		path: '/oauth',
+		element: <OauthPage />
+	}
+]

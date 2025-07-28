@@ -1,11 +1,15 @@
+@use './variables' as var;
+
+@import '@a1rth/css-normalize';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 
 body {
     font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
-    color: #FFFFFF;
+    color: var.$foreground;
     background-color: #252525;
 }
 
@@ -20,4 +24,8 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
 }
