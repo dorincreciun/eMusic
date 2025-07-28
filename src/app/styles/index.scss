@@ -3,6 +3,9 @@
 @import '@a1rth/css-normalize';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+html {
+    scrollbar-gutter: inherit;
+}
 
 body {
     font-family: "Inter", sans-serif;
@@ -10,7 +13,7 @@ body {
     font-weight: 400;
     font-style: normal;
     color: var.$foreground;
-    background-color: #252525;
+    background-color: var.$background;
 }
 
 .container-fluid {

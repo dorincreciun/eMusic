@@ -1,10 +1,33 @@
 @use '../../../../app/styles/variables' as var;
 
-.header__nav-link{
-    font-size: 16px;
-    color: var.$foreground;
-
-    &--active{
-        color: var.$primary;
+.header__nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var.$card-foreground;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+    
+    &:hover {
+        color: var.$foreground;
+        background: var.$secondary;
+        border-color: var.$border;
+        transform: translateY(-2px);
+    }
+    
+    &--active {
+        color: var.$primary-foreground;
+        background: var.$primary;
+        border-color: var.$primary;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(29, 185, 84, 0.25);
+        
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(29, 185, 84, 0.35);
+        }
     }
 }

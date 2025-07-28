@@ -3,54 +3,55 @@
 .header__logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 12px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: var.$radius;
+    transition: all 0.2s ease;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
 
     &:hover {
-        background-color: transparent;
-        transform: scale(1.05);
-
+        background: var.$secondary;
+        transform: translateY(-1px);
+        
         .header__logo-icon {
-            background-color: transparent;
-            transform: rotate(15deg);
-            box-shadow: 0 0 10px rgba(var.$primary, 0.5);
-
+            background: var.$primary;
+            transform: scale(1.05);
+            
             svg {
-                stroke: var.$primary;
-                transform: scale(1.1);
+                stroke: var.$primary-foreground;
             }
         }
-
+        
         .header__logo-text {
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+            color: var.$foreground;
         }
     }
 
     &-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2.5px solid var.$primary;
-        background-color: var.$primary;
+        width: 36px;
+        height: 36px;
+        border-radius: var.$radius;
+        background: var.$card;
+        border: 2px solid var.$border;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: all 0.2s ease;
 
         svg {
-            stroke: var.$muted;
-            width: 30px;
-            height: 30px;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            stroke: var.$primary;
+            width: 20px;
+            height: 20px;
+            transition: all 0.2s ease;
         }
     }
 
     &-text {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 700;
-        color: #FFFFFF;
-        transition: all 0.3s ease-in-out;
+        color: var.$foreground;
+        letter-spacing: -0.5px;
+        transition: all 0.2s ease;
     }
 }
