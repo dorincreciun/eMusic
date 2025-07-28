@@ -1,47 +1,28 @@
-// eslint.config.js
-import js from '@eslint/js';
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from 'typescript-eslint';
-import { plugin as tanstackQueryPlugin } from '@tanstack/eslint-plugin-query';
-import { globalIgnorePatterns } from 'eslint/config';
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
+import { globalIgnores } from 'eslint/config'
+import pluginQuery from '@tanstack/eslint-plugin-query'
 
 export default tseslint.config([
-    globalIgnorePatterns(['dist']),
-
-    {
-        plugins: {
-            '@tanstack/query': tanstackQueryPlugin,
-        },
-    },
-
+    ...pluginQuery.configs['flat/recommended'],
+    globalIgnores(['dist']),
     {
         files: ['**/*.{ts,tsx}'],
-        ignores: [],
-        plugins: {
-            '@tanstack/query': tanstackQueryPlugin,
-            'react-hooks': reactHooks,
-            'react-refresh': reactRefresh,
-        },
+        extends: [
+            js.configs.recommended,
+            tseslint.configs.recommended,
+            reactHooks.configs['recommended-latest'],
+            reactRefresh.configs.vite,
+        ],
         languageOptions: {
             ecmaVersion: 2020,
-            sourceType: 'module',
-            globals: {
-                ...globals.browser,
-            },
-        },
-        linterOptions: {
-            reportUnusedDisableDirectives: true,
+            globals: globals.browser,
         },
         rules: {
-            'react-hooks/rules-of-hooks': 'error',
-            'react-hooks/exhaustive-deps': 'warn',
-        },
+            "@tanstack/query/exhaustive-deps": "error"
+        }
     },
-
-    js.configs.recommended,
-    tseslint.configs.recommended,
-    reactHooks.configs['recommended-latest'],
-    reactRefresh.configs.vite,
-]);
+])
