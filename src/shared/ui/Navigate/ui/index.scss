@@ -5,29 +5,34 @@
     font-weight: 500;
     color: var.$card-foreground;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: var.$radius;
+    transition: all 0.2s ease;
     position: relative;
-    border: 2px solid transparent;
     
     &:hover {
         color: var.$foreground;
-        background: var.$secondary;
-        border-color: var.$border;
-        transform: translateY(-2px);
+        transform: translateY(-1px);
     }
     
     &--active {
-        color: var.$primary-foreground;
-        background: var.$primary;
-        border-color: var.$primary;
+        color: var.$primary;
         font-weight: 600;
-        box-shadow: 0 4px 12px rgba(29, 185, 84, 0.25);
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background: var.$primary;
+            border-radius: 1px;
+        }
         
         &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(29, 185, 84, 0.35);
+            color: var.$primary;
         }
     }
 }
