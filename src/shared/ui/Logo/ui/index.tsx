@@ -1,6 +1,8 @@
 import { Link } from 'react-router'
 /* SCSS */
 import './index.scss'
+/* ICONS */
+import { CirclePlay } from 'lucide-react'
 
 export const Logo = () => {
 	return (
@@ -8,7 +10,10 @@ export const Logo = () => {
 			to={'/'}
 			className={'header__logo'}
 		>
-			eMusic
+			<div className={'header__logo-icon'}>
+				<CirclePlay />
+			</div>
+			<span className={'header__logo-text'}>eMusic</span>
 		</Link>
 	)
 }

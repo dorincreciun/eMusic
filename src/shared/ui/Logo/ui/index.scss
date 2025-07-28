@@ -1,5 +1,56 @@
+@use '../../../../app/styles/variables' as var;
+
 .header__logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        transform: scale(1.05);
+
+        .header__logo-icon {
+            background-color: transparent;
+            transform: rotate(15deg);
+            box-shadow: 0 0 10px rgba(var.$primary, 0.5);
+
+            svg {
+                stroke: var.$primary;
+                transform: scale(1.1);
+            }
+        }
+
+        .header__logo-text {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    &-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2.5px solid var.$primary;
+        background-color: var.$primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        svg {
+            stroke: var.$muted;
+            width: 30px;
+            height: 30px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+    }
+
+    &-text {
+        font-size: 24px;
+        font-weight: 700;
+        color: #FFFFFF;
+        transition: all 0.3s ease-in-out;
+    }
 }
