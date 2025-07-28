@@ -1,7 +1,13 @@
-import type {ReactNode} from "react";
+import type {FC, PropsWithChildren} from "react";
+/* SCSS */
+import './index.scss'
 
-export const LayoutApp = ({children}: {children: ReactNode}) => {
-    return <div>{children}</div>
+export const LayoutApp: FC<PropsWithChildren> = ({children}) => {
+    return (
+        <div className='layout-app'>
+            {children}
+        </div>
+    )
 }
 
 LayoutApp.displayName = 'LayoutApp'

@@ -1,7 +1,13 @@
-import type {ReactNode} from "react";
+import type {FC, PropsWithChildren} from "react";
+/* SCSS */
+import './index.scss'
 
-export const LayoutPage = ({children}: {children: ReactNode}) => {
-    return <div>{children}</div>
+export const LayoutPage: FC<PropsWithChildren> = ({children}) => {
+    return (
+        <div className='layout-page'>
+            {children}
+        </div>
+    )
 }
 
 LayoutPage.displayName = 'LayoutPage'
