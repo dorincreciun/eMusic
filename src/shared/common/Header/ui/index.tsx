@@ -12,7 +12,7 @@ export const Header = () => {
 				<nav>
 					<ul className={'header__nav'}>
 						<li>
-							<Navigate path={'/'}>Home</Navigate>
+							<Navigate path={'/'}>Playlists</Navigate>
 						</li>
 						<li>
 							<Navigate path={'/about'}>About</Navigate>

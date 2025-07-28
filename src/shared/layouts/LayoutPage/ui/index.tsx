@@ -1,11 +1,8 @@
-import type {FC, PropsWithChildren} from "react";
+/* Types */
+import type { FC, PropsWithChildren } from 'react'
 
-export const LayoutPage: FC<PropsWithChildren> = ({children}) => {
-    return (
-        <div className='container'>
-            {children}
-        </div>
-    )
+export const LayoutPage: FC<PropsWithChildren> = ({ children }) => {
+	return <div className="container">{children}</div>
 }
 
 LayoutPage.displayName = 'LayoutPage'
