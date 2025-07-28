@@ -1,16 +1,13 @@
+@use '../../../../app/styles/variables' as var;
+
 .header {
     padding: 15px 0;
+    border-bottom: 1px solid var.$primary;
 
     &__content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    &__logo {
-        font-size: 24px;
-        font-weight: 700;
-        color: #FFFFFF;
     }
 
     &__nav {
